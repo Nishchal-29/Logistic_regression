@@ -23,5 +23,8 @@ X=iris['data'][:, 3:]
 clsfr.fit(X,y)
 x_new = np.linspace(0,3,1000).reshape(-1,1)
 y_prob = clsfr.predict_proba(x_new)
+plt.title("Prediction")
+plt.xlabel("petal width(cm)")
+plt.ylabel("Probability of Iris-Setosa")
 plt.plot(x_new, y_prob[:,1], "g-", label="Iris-Setosa")
 plt.show()
